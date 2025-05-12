@@ -60,9 +60,8 @@ button{
     cursor: pointer;
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .searchbar a, .searchbar input[type=search] {
-        visibility: hidden;
         float: none;
         display: block;
         text-align: left;
@@ -81,7 +80,7 @@ button{
         margin: 0;
         padding: 14px;
     }
-} */
+}
 
 /* Navigation Bar */
 .nav-bar {
