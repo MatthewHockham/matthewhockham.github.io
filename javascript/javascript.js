@@ -114,6 +114,67 @@ function toggleNavbar() {
         setTimeout(() => updateCarousel(), 100);
     });
 
+    /* Carousel for Courses Section */
+
+    const coursesTrack = document.getElementById("carousel-courses-track");
+    const courseContainer = document.querySelector(".carousel-courses-container");
+    let courseCards = Array.from(document.querySelectorAll(".courses-card"));
+
+    const firstCourseClone = cards[0].cloneNode(true);
+    const lastCourseClone = cards[cards.length - 1].cloneNode(true);
+    coursesTrack.insertBefore(lastCourseClone, courseCards[0]);
+    coursesTrack.appendChild(firstCourseClone);
+    cards = Array.from(document.querySelectorAll(".courses-cards"));
+
+    let coursesCurrent = 1;
+
+    function getVisibleCoursesCount() {
+        const width = window.innerWidth;
+        if (width >= 900) return 2;
+        if (width >= 600) return 1;
+        return 1;
+    }
+
+    function updateCoursesCarousel() {
+        const coursesContainerWidth = container.offsetWidth;
+        const courseCardWidth = coursesContainerWidth / getVisibleCoursesCount();
+        coursesTrack.style.transition = "transform 0.4s ease-in-out";
+        coursesTrack.style.transform = `translateX(-${courseCardWidth * coursesCurrent}px)`;
+    }
+
+    function moveCoursesCarousel(courseDirection) {
+        const coursesVisible = getVisibleCoursesCount();
+        const coursesContainerWidth = courseContainer.offsetWidth;
+        const courseCardWidth = coursesContainerWidth / coursesVisible;
+
+        coursesCurrent += courseDirection;
+        coursesTrack.style.transition = "transform 0.4s ease-in-out";
+        coursesTrack.style.transform = `translateX(-${courseCardWidth * coursesCurrent}px)`;
+
+        coursesTrack.addEventListener("transitionend", () => {
+            if (coursesCurrent === 0) {
+                coursesCurrent = courseCards.length - 2;
+                coursesTrack.style.transition = "none";
+                coursesTrack.style.transform = `translateX(-${courseCardWidth * coursesCurrent}px)`;
+            } else if (coursesCurrent === courseCards.length - 1) {
+                coursesCurrent = 1;
+                coursesTrack.style.transition = "none";
+                coursesTrack.style.transform = `translateX(-${courseCardWidth * coursesCurrent}px)`;
+            }
+            prevCourseTranslate = -courseCardWidth * coursesCurrent;
+        }, { once: true});
+    }
+
+    window.moveCoursesCarousel = moveCoursesCarousel
+
+    window.addEventListener("resize", () => {
+        setTimeout(() => updateCoursesCarousel(), 100)
+    })
+
+    window.addEventListener("load", () => {
+        setTimeout(() => updateCoursesCarousel(), 100)
+    })
+
 })();
 
 /* Search bar */
