@@ -327,7 +327,7 @@ body {
 }
 
 #jobs {
-    height: 800px;
+    height: 600px;
 }
 
 .job-card {
@@ -423,7 +423,6 @@ body {
 
 @media screen and (max-width: 900px) {
     .course-card img {
-        height: 300px; 
         width: 600px;
         margin-left: 50px;
     }
