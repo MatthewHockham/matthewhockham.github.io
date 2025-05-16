@@ -527,7 +527,10 @@ input.invalid {
     background-color: #4caf50;
 }
 
-/* Begin Footer
+/* Begin Footer */
+    footer {
+        height: 275px !important;
+    }
     /* First footer column; inline with one another + aligned on the left */
     #footerSitemap {
         display: inline-block;
@@ -571,6 +574,16 @@ input.invalid {
         font-size: 16px;
         line-height: 25px;
         float: right;
+    }
+
+    #footerMedia {
+        display: inline-block;
+        vertical-align: top;
+        font-family: arial;
+        font-size: 16px;
+        line-height: 25px;
+        margin-left: -415%;
+        margin-top: -50%;
     }
 
     #footerCopyright {
