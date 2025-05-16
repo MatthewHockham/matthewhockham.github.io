@@ -344,11 +344,11 @@ body {
     color: #4d4d4d;
 }
 
-/* @media screen and (max-width: 1205px) {
+@media screen and (max-width: 1205px) {
     #jobs {
         height: 800px;
     }
-} */
+}
 
 @media screen and (max-width: 768px) {
     #jobs {
