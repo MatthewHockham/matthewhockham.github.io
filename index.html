@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Title of the web page-->
+<title>Our Vacancies - Web Developers</title>
+<!--Linked css files-->
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<link rel="stylesheet" href="my_bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- <script src="javascript/javascript.js"></script> -->
+<script src="javascript/javascript.js" defer></script>
+<style type="text/css">
+    footer {
+        text-align: left;
+        padding: 3px 0px;
+        background-color: #333;
+        border-top-color: white;
+        border-top: solid;
+        color: white;
+    }
+
+    html {
+        scroll-behavior: smooth !important;
+    }
+</style>
+<!-- Mobile Optimisation Sorted, Get footer completed, Courses Filled Out, Job Descriptions & Image 16/05 -->
+</head>
+<body>
+<div class="header" id="header">
+    <a href="#imagebox" style="text-decoration: none;"><h1>Hot Beans Web&nbsp;</h1></a>
+    <div class="searchbar">
+        <form id="search-form">
+            <input type="text" id="text" placeholder="Search..">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <div id="navbar">
+        <!-- NavBar Pages -->
+        <div class="nav-bar" id="topnav">
+            <a href="#about" class="nav-link"><i class="fas fa-circle-user"></i> ABOUT</a>
+            <a href="#ourTeam" class="nav-link"><i class="fas fa-users"></i> OUR TEAM</a>
+            <a href="#jobs" class="nav-link"><i class="fas fa-briefcase"></i> JOBS</a>
+            <a href="#courses" class="nav-link"><i class="fas fa-book"></i> COURSES</a>
+            <a href="#apply" class="nav-link"><i class="fas fa-upload"></i> APPLY</a>
+        </div>
+        <!-- Hide nav bar for smaller screens -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            <i style="color:black" class="fas fa-bars"></i>
+        </a>
+    </div>
+</div>
+    <div style="color: #333">
+        <div class="imagebox" id="imagebox">
+            <div class="top-page-center-text">
+                <p>Are you an experienced website developer?</p>
+                <div class="subtitle">
+                    <p>We need people like you who make a high-quality, <br>
+                    perfectional web page for any business.</p>
+                </div>
+                <div class="read-more-button" style="text-decoration: none;"><a href="#about">Read more →</a></div>
+            </div>
+        </div>
+    <div id="about" class="section">
+        <h1>About Hot Beans Web</h1>
+        <div id="about-text">
+            <p>Hot Beans Web is an upcoming company founded in 2024 aiming to create amazing websites for small businesses. </p>
+        </div>
+    </div>
+
+    <div id="ourTeam" class="section">
+        <h1>Our Team</h1>
+        <div class="teamText">
+            <p>The team at Hot Beans is still developing and we are always looking<br>
+            for more people to join our team. Our current members consist of:</p>
+        </div>
+        <div class="carousel-container" id="carousel-container">
+            <div class="carousel-track" id="carousel-track">
+                <div class="profile-card">
+                    <div class="card">
+                        <img src="images/employee_1.png" alt="Bob Smith">
+                        <h3>Bob Smith</h3>
+                        <div class="role">CEO/Founder</div>
+                        <p>About</p>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="card">
+                        <img src="images/employee_2.png" alt="Lydia Henderson">
+                        <h3>Lydia Henderson</h3>
+                        <div class="role">Client Liasion</div>
+                        <p>About</p>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="card">
+                        <img src="images/employee_3.png" alt="George Revie">
+                        <h3>George Revie</h3>
+                        <div class="role">Web Developer</div>
+                        <p>About</p>
+                    </div>
+                </div>
+                    <div class="profile-card">
+                    <div class="card">
+                        <img src="images/employee_4.png" alt="Braydon Philips">
+                        <h3>Braydon Philips</h3>
+                        <div class="role">'Javascript Programmer'</div>
+                        <p>About</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-buttons">
+            <button onclick="moveCarousel(-1)">⬅️ Prev</button>
+            <button onclick="moveCarousel(1)">Next ➡️</button>
+        </div>
+
+    </div>
+
+    <div id="jobs" class="section">
+        <p>Job Section</p>
+        <div class="job-card">
+            <div class="card">
+                <img src="images/javascriptJob.jpg" alt="Picure of Javascript Code">
+                <div class="job_role"><h3>Javascript Programmer</h3></div>
+                <p>About</p>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="card">
+                <img src="" alt="">
+                <div class="job_role"><h3>Client Liasion</h3></div>
+                <p>About</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="courses" class="section">
+        <p>Courses Section</p>
+        <div class="carousel-courses-container" id="carousel-courses-container">
+            <div class="carousel-courses-track" id="carousel-courses-track">
+                <div class="courses-card">
+                    <div class="course-card">
+                        <img src="images/placeholder_image.webp" alt="">
+                        <div class="course"></div>
+                        <p>About</p>
+                    </div>
+                </div>
+
+                <div class="courses-card">
+                    <div class="course-card">
+                        <img src="images/placeholder_image.webp" alt="">
+                        <div class="course"></div>
+                        <p>About</p>
+                    </div>
+                </div>
+
+                <div class="courses-card">
+                    <div class="course-card">
+                        <img src="images/placeholder_image.webp" alt="">
+                        <div class="course"></div>
+                        <p>About</p>
+                    </div>
+                </div>
+
+                <div class="courses-card">
+                    <div class="course-card">
+                        <img src="images/placeholder_image.webp" alt="">
+                        <div class="course"></div>
+                        <p>About</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-courses-buttons">
+            <button onclick="moveCoursesCarousel(-1)">⬅️ Prev</button>
+            <button onclick="moveCoursesCarousel(1)">Next ➡️</button>
+        </div>
+
+    </div>
+
+    <div id="apply" class="section">
+        <p>Apply Section</p>
+        <div class="form">
+            <form action="action_page.php" id="form">
+                <div class="inputs">Name:
+                    <p><input placeholder="First name.." oninput="this.className = ''"></p>
+                    <p><input placeholder="Last name.." oninput="this.className = ''"></p>
+                </div>
+
+                <div class="inputs">Contact Info:
+                    <p><input placeholder="Email Address.." oninput="this.className = ''"></p>
+                    <p><input placeholder="Phone Number.." oninput="this.className = ''"></p>
+                </div>
+
+                <div style="overflow:auto; float:right;">
+                    <button type="button" id="prevBtn" onclick="formButton(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="formButton(1)">Next</button>
+                </div>
+
+                <div style="text-align: center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    </div>
+        <!--Footer of page-->
+        <footer>
+            <!-- First part of Footer; sitemap providing quick links to other pages-->
+             <div id="footerSitemap">
+                <p><b>Sitemap</b></p>
+                <a href="#imagebox">Back to Top</a><br>
+                <a href="#ourTeam">Our Team</a><br>
+                <a href="#jobs">Jobs</a><br>
+                <a href="#courses">Courses</a><br>
+                <a href="#apply">Apply</a><br>
+             </div>
+             <!-- Second part of Footer; links to relevant pages -->
+              <div id="footerInfo">
+                <p><b><a href="about.html">FAQs</a></b><br>
+                <a href="T&C.html">Terms and Conditions</a></p>
+              </div>
+              <!-- Third part of Footer; contact details -->
+               <div id="footerContactDetails">
+                <p>E: <a style="color:white; text-decoration:underline" href="mailto:info@hotbeansweb.org">info@hotbeansweb.org</a><br>
+                    T: +44 (0) 57 984 1267</p>
+               </div>
+               <!-- Fourth part of Footer; location of HQ -->
+                <div id="footerLocationHQ">
+                    <p><b>Contact:</b><br><br>
+                    Hot Beans Web<br>
+                    Location<br>
+                    Post Code<br>
+                    <br>
+                    <b>Follow us:</b><br>
+                    <div display="inline-block">
+                        <a href="https://www.facebook.com/@hotbeansweb"><i class="fa-brands fa-facebook" width="20px" alt=""></i></a>
+                        <a href="https://www.instagram.com/@hotbeansweb"><i class="fa-brands fa-instagram" width="20px" alt=""></i></a>
+                        <a href="https://www.x.com/@hotbeansweb"><i class="fa-brands fa-x" width="20px" alt=""></i></a>
+                        <a href="https://www.linkedin.com/@hotbeansweb"><i class="fa-brands fa-linkedin" width="20px" alt=""></i></a>
+                    </div>
+                    </p>
+                </div>
+                <p class="text-center text-body-secondary" id="footerCopyright"><a style="color: white;">© 2025 Hot Beans Web</a></p> <!--Copyright for the page-->
+</div>
+<!-- <script src="javascript/javascript.js" defer></script> -->
+</body>
+</html>
