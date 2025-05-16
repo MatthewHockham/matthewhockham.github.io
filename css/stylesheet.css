@@ -590,22 +590,22 @@ input.invalid {
 
     /* Compatibility at 100px screen width */
     @media only screen and (max-width: 768px) {
+        #footerCopyright {
+            float: left;
+            margin-left: -60%}
         #footerContactDetails {
             display: block;
-            float: none;
+            float: right;
+            margin-top: -41%;
             padding-left: 7%}
         #footerLocationHQ {
-            display: block;
-            float: none;
-            padding-left: 7%}
+            float: right;
+            margin-top: -30%;}
 		#footerInfo {
+            margin-top: -2%;
             display: block;}
         #footerSitemap {
             display: block;}
-        #footerLogo {
-            display: none;}
         footer {
-            height:800px;}
-        .top-left {
-            line-height: 1;}       
+            height: 450px;}       
     } 
