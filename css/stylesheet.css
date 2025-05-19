@@ -266,7 +266,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .card img {
@@ -293,6 +293,7 @@ body {
 .card h3{
     margin: 15px 0 5px;
     /* cursor: text; */
+    text-align: center;
 }
 
 .card p{
@@ -304,6 +305,7 @@ body {
 .card .role{
     font-weight: bold;
     color: #888;
+    text-align: center;
     /* cursor: text; */
 }
 
@@ -327,7 +329,7 @@ body {
 }
 
 #jobs {
-    height: 600px;
+    height: 900px;
 }
 
 .job-card {
@@ -344,15 +346,63 @@ body {
     color: #4d4d4d;
 }
 
-@media screen and (max-width: 1205px) {
+.apply-button {
+    margin-top: 20px;   
+}
+
+.apply-button button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1815px) {
     #jobs {
-        height: 800px;
+        height: 950px;
+    }
+    .job-card {
+        margin-left: 0%;
+        width: 800px;
     }
 }
 
+/* @media screen and (max-width: 1615px) {
+    #jobs {
+        height: 950px;
+    }
+    .job-card {
+        margin-left: 0%;
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 1315px) {
+    #jobs {
+        height: 1150px;
+    }
+    .job-card {
+        margin-left: 0%;
+        width: 625px;
+    }
+}
+
+@media screen and (max-width: 1265px) {
+    #jobs {
+        height: 1500px;
+    }
+    .job-card {
+        margin-left: 0%;
+        width: 600px;
+    }
+} */
+
 @media screen and (max-width: 768px) {
     #jobs {
-        height: 1050px;
+        height: 1700px;
     }
 
     .job-card {
@@ -461,7 +511,7 @@ body {
 
 @media screen and (max-width: 768px) {
     #courses {
-        height: 600px;
+        height: 800px;
     }
 }
 
