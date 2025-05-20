@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @media screen and (max-width: 100%) {
-    html{
+    html {
         width: 100%
     }
 }
@@ -133,7 +133,7 @@ body {
     visibility: visible;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
     #navbar .nav-bar a, .searchbar {
         display: none;
     }
@@ -206,7 +206,7 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
     .top-page-center-text p {
         line-height: 50px;
     }
@@ -406,7 +406,7 @@ body {
     }
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
     #jobs {
         height: 1700px;
     }
@@ -515,7 +515,7 @@ body {
     background: #555;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
     #courses {
         height: 800px;
     }
@@ -657,7 +657,7 @@ input.invalid {
     }
 
     /* Compatibility at 100px screen width */
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 414px) {
         #footerCopyright {
             float: left;
             margin-left: -60%}
