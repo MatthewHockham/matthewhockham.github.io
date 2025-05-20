@@ -193,6 +193,11 @@ document.getElementById('search-form').onsubmit = function() {
 
 /* Form Application */
 
+function toggleFormMenu() {
+    const overlay = document.getElementById("formPopup");
+    overlay.classList.toggle("show");
+}
+
 var currentTab = 0;
 showTab(currentTab);
 
