@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100%) {
     html{
         width: 100%
     }
