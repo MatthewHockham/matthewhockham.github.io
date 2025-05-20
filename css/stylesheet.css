@@ -2,8 +2,9 @@
 
 @media screen and (max-width: 414px) {
     html {
-        width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
+        scroll-behavior: smooth !important;
     }
 }
 
@@ -12,9 +13,9 @@ button {
     outline: none;
 }
 
-/* body {
+body {
     overflow-x: hidden;
-} */
+}
 
 .header {
     height: 80px;
@@ -180,14 +181,18 @@ button {
 
 .top-page-center-text {
     color: white;
-    padding: 100px 0px 0px 100px;
-    line-height: 0.7;
+    padding: 100px 0px 0px 0px;
+    line-height: 1;
     font-size: 50px;
-    text-align: left;
-    position: absolute;
-    top: 8px;
-    left: 16px;
+    margin-left: 15px;
 }
+
+/* .top-page-center-text {
+    margin-left: 15px;
+    color: white;
+    font-size: 50px;
+    padding: 100px 0px 0px 0px;
+} */
 
 .subtitle {
     font-size: 25px;
@@ -208,8 +213,9 @@ button {
 }
 
 @media screen and (max-width: 414px) {
-    .top-page-center-text p {
-        line-height: 50px;
+    .top-page-center-text {
+        /* left: -10%; */
+        line-height: 100%;
     }
 
     .subtitle p {
@@ -219,6 +225,7 @@ button {
 
 #about {
     height: 400px;
+    margin-left: 15px;
 }
 
 #about h1 {
@@ -228,6 +235,13 @@ button {
 
 #ourTeam {
     height: 700px;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 414px) {
+    #ourTeam {
+        height: 900px;
+    }
 }
 
 .carousel-container {
