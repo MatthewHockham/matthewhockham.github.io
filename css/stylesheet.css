@@ -235,11 +235,18 @@ body {
 
 #ourTeam {
     height: 700px;
+}
+
+#ourTeam h1 {
+    margin-left: 15px;
+}
+
+.teamText {
     margin-left: 15px;
 }
 
 @media screen and (max-width: 414px) {
-    #ourTeam {
+    #ourTeam{
         height: 900px;
     }
 }
