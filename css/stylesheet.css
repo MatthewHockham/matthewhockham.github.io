@@ -243,6 +243,7 @@ body {
 
 .teamText {
     margin-left: 15px;
+    display: block;
 }
 
 @media screen and (max-width: 414px) {
