@@ -181,6 +181,8 @@ document.querySelectorAll('#navbar .nav-link').forEach(link => {
         setTimeout(() => updateCoursesCarousel(), 100)
     })
 
+
+
 })();
 
 /* Search bar */
@@ -192,93 +194,181 @@ document.getElementById('search-form').onsubmit = function() {
 }
 
 /* Form Application */
+var currentTab = 0;
 
-function toggleFormMenu() {
-    const overlay = document.getElementById("formPopup");
-    overlay.classList.toggle("show");
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.btn-apply').forEach(button => {
+    button.addEventListener('click', openForm);
+    });
+});
+
+// function openForm() {
+//     const overlay = document.getElementById('formPopup');
+//     overlay.classList.toggle('show');
+//     if (overlay.classList.contains('show')) {
+//         currentTab = 0;
+//         showTab(currentTab);
+//     } else {
+//         console.error("formPopup not found")
+//     }
+// }
+
+function openForm() {
+    const overlay = document.getElementById('formPopup');
+    if (!overlay) {
+        console.error("formPopup not found");
+        return;
+    }
+
+    overlay.classList.add('show');
+    currentTab = 0;
+    showTab(currentTab);
 }
 
-var currentTab = 0;
-showTab(currentTab);
-
 function showTab(n) {
-    var x = document.getElementsByClassName("form_inputs");
-    x[n].style.display = "block";
-    if (n === 0) {
-        document.getElementById("prevBtn").style.display = "none";
-    } else {
-        document.getElementById("prevBtn").style.display = "inline";
+    var x = document.getElementsByClassName("inputs");
+    for(let i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
     }
+    x[n].style.display = "block";
+
+    document.getElementById("prevBtn").style.display = (n === 0) ? "none" : "inline";
+
     if (n === (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }
-}
 
-function formButton(n) {
-    var x = document.getElementByClassName("form_inputs");
-    if (n == 1 && !validateForm()) return false;
-    x[currentTab].style.display = "none";
-    currentTab += n;
-    if (currentTab >= x.length) {
-        document.getElementById("form").submit();
-        return false;
-    }
-    showTab(currentTab);
-}
-
-var currentTab = 0;
-showTab(currentTab);
-
-function showTab(n) {
-    var x = document.getElementsByClassName("inputs");
-    x[n].style.display = "block";
-    if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-    } else {
-        document.getElementById("prevBtn").style.display = "inline";
-    }
-    if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
-    } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-    }
-    fixStepIndicator(n)
+    // if (n === 0) {
+    //     document.getElementById("prevBtn").style.display = "none";
+    // } else {
+    //     document.getElementById("prevBtn").style.display = "inline";
+    // }
 }
 
 function formButton(n) {
     var x = document.getElementsByClassName("inputs");
+
+    if (!x[currentTab]) {
+        console.error("Invalid currentTab index:", currentTab);
+        return false;
+    }
+
     if (n == 1 && !validateForm()) return false;
+
     x[currentTab].style.display = "none";
+
     currentTab += n;
+
+    if (currentTab < 0) currentTab = 0;
     if (currentTab >= x.length) {
         document.getElementById("form").submit();
         return false;
     }
+
     showTab(currentTab);
 }
+
+// function validateForm() {
+//     var x, y, i, valid = true;
+//     x = document.getElementsByClassName("inputs");
+//     y = x[currentTab].getElementsByTagName("input");
+//     for (i = 0; i < y.length; i++) {
+//         if (y[i].value == "") {
+//             y[i].className += " invalid";
+//             valid = false;
+//         }
+//     }
+//     if (valid) {
+//         x[currentTab].className += " finish";
+//     }
+//     return valid;
+// }
 
 function validateForm() {
-    var x, y, i, valid = true;
-    x = document.getElementsByClassName("inputs");
-    y = x[currentTab].getElementsByTagName("input");
-    for (i = 0; i < y.length; i++) {
-        if (y[i].valie == "") {
+    var x = document.getElementsByClassName("inputs");
+
+    if (!x[currentTab]) {
+        console.error("Invalid currentTab index in validateForm:", currentTab);
+        return false;
+    }
+
+    var y = x[currentTab].getElementsByTagName("input");
+    var valid = true;
+
+    for (var i = 0; i < y.length; i++) {
+        if (y[1].value == "") {
             y[i].className += " invalid";
             valid = false;
         }
     }
     if (valid) {
-        document.getElementsByClassName("inputs")[currentTab].className += " finish";
+        x[currentTab].className += " finish";
     }
     return valid;
 }
 
 function fixStepIndicator(n) {
-    var i, x = document.getElementsByClassName("inputs");
+    var i, x = document.getElementsByClassName("step");
     for(i = 0; i < x.length; i++) {
         x[i].className = x[i].className.replace(" active", "");
-        x[n].className += " active";
     }
+    x[n].className += " active";
 }
+
+const form = document.getElementById('form');
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent actual submission (testing the form)
+    console.log("Submit handler fired");
+
+    // Closing the form
+    const overlay = document.getElementById('formPopup');
+    overlay.classList.remove('show');
+
+    // Show message
+    const formSubmitted = document.getElementById('formSubmitted');
+    if (formSubmitted) {
+        formSubmitted.style.display = "block";
+        console.log("Showing formSubmitted message");
+    } else {
+        console.error("formSubmitted element not found")
+    }
+
+    // Hide message after 3 seconds
+    setTimeout(() => {
+        formSubmitted.style.display = "none";
+        form.reset();
+    }, 3000);
+});
+
+// var currentTab = 0;
+// showTab(currentTab);
+
+// function showTab(n) {
+//     var x = document.getElementsByClassName("inputs");
+//     x[n].style.display = "block";
+//     if (n == 0) {
+//         document.getElementById("prevBtn").style.display = "none";
+//     } else {
+//         document.getElementById("prevBtn").style.display = "inline";
+//     }
+//     if (n == (x.length - 1)) {
+//         document.getElementById("nextBtn").innerHTML = "Submit";
+//     } else {
+//         document.getElementById("nextBtn").innerHTML = "Next";
+//     }
+//     fixStepIndicator(n)
+// }
+
+// function formButton(n) {
+//     var x = document.getElementsByClassName("inputs");
+//     if (n == 1 && !validateForm()) return false;
+//     x[currentTab].style.display = "none";
+//     currentTab += n;
+//     if (currentTab >= x.length) {
+//         document.getElementById("form").submit();
+//         return false;
+//     }
+//     showTab(currentTab);
+// }
