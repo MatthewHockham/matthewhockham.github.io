@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=width-device, initial-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!--Title of the web page-->
 <title>Our Vacancies - Web Developers</title>
+<!-- Meta Tag for Search Engine Optimisation -->
+<meta name="description" content="Web developer jobs available at Hot Beans Web, a company about helping small businesses thrive online.">
 <!--Linked css files-->
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-<link rel="stylesheet" href="my_bootstrap/css/bootstrap.min.css">
 <!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- <script src="javascript/javascript.js"></script> -->
-<!-- <script src="javascript/javascript.js" defer></script> -->
 <style type="text/css">
     footer {
         text-align: left;
         padding: 3px 0px;
         background-color: #333;
-        border-top-color: white;
-        border-top: solid;
+        border-top: solid white;
         color: white;
     }
 
@@ -43,7 +41,6 @@
                 <a href="#ourTeam" class="nav-link"><i class="fas fa-users"></i> OUR TEAM</a>
                 <a href="#jobs" class="nav-link"><i class="fas fa-briefcase"></i> JOBS</a>
                 <a href="#courses" class="nav-link"><i class="fas fa-book"></i> COURSES</a>
-                <!-- <a href="#apply" class="nav-link"><i class="fas fa-upload"></i> APPLY</a> -->
             </div>
             <!-- Hide nav bar for smaller screens -->
             <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
@@ -59,7 +56,7 @@
                     <p>We need people like you who make a high-quality, <br>
                     perfectional web page for any business.</p>
                 </div>
-                <div class="read-more-button" style="text-decoration: none;"><a href="#about">Read more →</a></div>
+                <div class="read-more-button" style="text-decoration: none;"><a href="#jobs">Read more →</a></div>
             </div>
         </div>
     <div id="about" class="section">
@@ -131,13 +128,12 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="carousel-buttons">
-            <button onclick="moveCarousel(-1)">⬅️ Prev</button>
-            <button onclick="moveCarousel(1)">Next ➡️</button>
+            <div class="carousel-buttons">
+                <button onclick="moveCarousel(-1)">⬅️ Prev</button>
+                <button onclick="moveCarousel(1)">Next ➡️</button>
+            </div>
         </div>
-    </div>
 
     <div id="jobs" class="section">
         <p>Job Section</p>
@@ -211,9 +207,9 @@
         </div>
     </div>
 
-    <div id="formPopup" class="overlay-container">
+    <!-- <div id="formPopup" class="overlay-container"> -->
         <!-- <div class="popup-box"> -->
-            <h2 style="color: green;">Apply Form</h2>
+            <!-- <h2 style="color: green;">Apply Form</h2>
             <form action="" class="form-container" id="form">
                 <div class="inputs">Name:
                     <p><input placeholder="First name.." oninput="this.className = ''"></p>
@@ -243,7 +239,7 @@
             </form>
         </div>
         <div id="formSubmitted">Your application has been submitted!</div>
-    </div>
+    </div> -->
 
     <div id="courses" class="section">
         <p>Courses Section</p>

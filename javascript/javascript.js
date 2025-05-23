@@ -120,6 +120,8 @@ document.querySelectorAll('#navbar .nav-link').forEach(link => {
         setTimeout(() => updateCarousel(), 100);
     });
 
+
+
     /* Carousel for Courses Section */
 
     const coursesTrack = document.getElementById("carousel-courses-track");
@@ -372,3 +374,26 @@ form.addEventListener("submit", function(e) {
 //     }
 //     showTab(currentTab);
 // }
+
+    // let current = 0;
+    // const cardWidth = 300 + 24;
+    // const cards = document.getElementById("profile-cards");
+
+    // function updateCarousel() {
+    //     cards.style.transform = `translateX(-${current * cardWidth})px`;
+    // }
+
+    // function nxtBtn() {
+    //     const maxWidth = cards.children.length - 1;
+    //     if (current < maxWidth) {
+    //         current++;
+    //         updateCarousel();
+    //     }
+    // }
+
+    // function prvBtn() {
+    //     if (current > 0) {
+    //         current--;
+    //         updateCarousel();
+    //     }
+    // }
