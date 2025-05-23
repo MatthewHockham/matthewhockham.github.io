@@ -232,117 +232,65 @@
                         <p><input placeholder="Phone number.." oninput="this.className= ''" required></p>
                     </div>
 
-                    <div class="buttons">
-                        <button type="submit" id="submitBtn">Submit</button>
-                        <button type="button" id="closeBtn">Close</button>
-                    </div>
+                    <button type="submit" id="submitBtn">Submit</button>
+                    <button type="button" id="closeBtn" onclick="toggleForm()">Close</button>
+
                 </form>
             </div>
         </div>
 
     </div>
 
-    <!-- <div id="formPopup" class="overlay-container"> -->
-        <!-- <div class="popup-box"> -->
-            <!-- <h2 style="color: green;">Apply Form</h2>
-            <form action="" class="form-container" id="form">
-                <div class="inputs">Name:
-                    <p><input placeholder="First name.." oninput="this.className = ''"></p>
-                    <p><input placeholder="Last name.." oninput="this.className = ''"></p>
-                </div>
-
-                <div class="inputs">Contact Info:
-                    <p><input placeholder="Email Address.." oninput="this.className = ''"></p>
-                    <p><input placeholder="Phone Number.." oninput="this.className = ''"></p>
-                </div>
-
-                <div class="inputs">Any other info?
-                    <p><textarea placeholder="Write something"></textarea></p>
-                </div>
-
-                <div class="buttons" style="overflow:auto; float:right;">
-                    <button type="button" id="prevBtn" onclick="formButton(-1)">⬅️ Prev</button>
-                    <button type="button" id="nextBtn" onclick="formButton(1)">Next ➡️</button>
-                </div>
-            </form>
-        </div>
-        <div id="formSubmitted">Your application has been submitted!</div>
-    </div> -->
-
     <div id="courses" class="section">
         <p>Courses Section</p>
-        <div class="carousel-courses-container" id="carousel-courses-container">
-            <div class="carousel-courses-track" id="carousel-courses-track">
-                <div class="courses-card">
-                    <div class="course-card">
-                        <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
-                        <div class="course"></div>
-                        <p>About</p>
-                    </div>
-                </div>
-
-                <div class="courses-card">
-                    <div class="course-card">
-                        <a href="https://skillsbuild.org/adult-learners/explore-learning/web-developer" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
-                        <div class="course"></div>
-                        <p>About</p>
-                    </div>
-                </div>
-
-                <div class="courses-card">
-                    <div class="course-card">
-                        <a href="https://www.edx.org/learn/web-development/ibm-introduction-to-web-development-with-html5-css3-and-javascript" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
-                        <div class="course"></div>
-                        <p>About</p>
-                    </div>
-                </div>
-
-                <div class="courses-card">
-                    <div class="course-card">
-                        <a href="https://www.edx.org/learn/computer-science/ibm-guided-project-interest-calculator-using-html-css-js" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
-                        <div class="course"></div>
-                        <p>About</p>
-                    </div>
-                </div>
+        <div class="courses-card">
+            <div class="course-card">
+                <a href="https://www.coursera.org/professional-certificates/ibm-full-stack-javascript-developer" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
+                <div class="course-name"><h3>IBM Full-Stack JavaScript Developer Professional Certificate</h3></div>
+                <div class="course-sub">What you'll learn:</div>
+                <ul id="course-bullet-point">
+                    <li>Master the full-stack development languages, frameworks, tools, and technologies 
+                        to develop job-ready skills valued by employers.</li><br>
+                    <li>Write, deploy, and scale cloud-native back-end applications using Node, 
+                        NoSQL databases, containers, microservices, and serverless.</li><br>
+                    <li>Develop websites and front-end software using HTML, CSS, JavaScript, and React.</li><br>
+                    <li>Employ DevOps practices and Agile methodologies to continuously build and deploy 
+                        software using CI/CD tools.</li>
+                </ul>
+                <div class="course-read-more" style="text-decoration: none;"><a href="#jobs">Read more →</a></div>
             </div>
         </div>
 
-        <div class="carousel-courses-buttons">
-            <button onclick="moveCoursesCarousel(-1)">⬅️ Prev</button>
-            <button onclick="moveCoursesCarousel(1)">Next ➡️</button>
+        <div class="courses-card">
+            <div class="course-card">
+                <a href="https://www.edx.org/learn/web-development/ibm-introduction-to-web-development-with-html5-css3-and-javascript" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
+                <div class="course-name"><h3>IBM: Introduction to Web Development with HTML5, CSS3, and JavaScript</h3></div>
+                <div class="course-sub">What you'll learn:</div>
+                <ul id="course-bullet-point">
+                    <li>Understand the Cloud Development Ecosystem and Terminology like front-end developer, back-end, server-side, full stack, etc.</li><br>
+                    <li>Work with programming languages used by front-end developers for creating user interfaces</li><br>
+                    <li>Become familiar with the developer tools and IDEs used by web programmers</li><br>
+                    <li>Practice and develop hands-on skills to work with HTML, CSS and JavaScript</li><br>
+                    <li>Manage and version control your projects with Git and GitHub</li>
+                </ul>
+                <div class="course-read-more" style="text-decoration: none;"><a href="#jobs">Read more →</a></div>
+            </div>
         </div>
 
+        <div class="courses-card">
+            <div class="course-card">
+                <a href="IBM: Guided Project: Interest Calculator Using HTML, CSS & JS" target="_blank"><img src="images/placeholder_image.webp" alt=""></a>
+                <div class="course-name"><h3>IBM: Guided Project: Interest Calculator Using HTML, CSS & JS</h3></div>
+                <div class="course-sub">What you'll learn:</div>
+                <ul id="course-bullet-point">
+                    <li>Modify HTML file according to requirements</li><br>
+                    <li>Modify CSS file according to requirements</li><br>
+                    <li>Modify JavaScript files according to requirements</li>
+                </ul>
+                <div class="course-read-more" style="text-decoration: none;"><a href="#jobs">Read more →</a></div>
+            </div>
+        </div>
     </div>
-
-    <!-- <div id="apply" class="section">
-        <p>Apply Section</p>
-        <div class="form">
-            <form action="action_page.php" id="form">
-                <div class="inputs">Name:
-                    <p><input placeholder="First name.." oninput="this.className = ''"></p>
-                    <p><input placeholder="Last name.." oninput="this.className = ''"></p>
-                </div>
-
-                <div class="inputs">Contact Info:
-                    <p><input placeholder="Email Address.." oninput="this.className = ''"></p>
-                    <p><input placeholder="Phone Number.." oninput="this.className = ''"></p>
-                </div>
-
-                <div class="buttons" style="overflow:auto; float:right;">
-                    <button type="button" id="prevBtn" onclick="formButton(-1)">⬅️ Prev</button>
-                    <button type="button" id="nextBtn" onclick="formButton(1)">Next ➡️</button>
-                </div>
-
-                <div style="text-align: center;margin-top:40px;">
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-                </div>
-
-            </form>
-        </div>
-    </div> -->
 
     <div class="footer">
         <!--Footer of page-->
