@@ -34,7 +34,7 @@ body {
     font-size: 20px;
     line-height: 0.1;
     border-bottom: solid;
-} 
+}
 
 .header h1 {
     font-size: 2rem;
@@ -189,7 +189,7 @@ body {
 
 @media screen and (max-width: 414px) {
     .top-page-center-text {
-        /* left: -10%; */
+        margin-top: -30%;
         line-height: 100%;
     }
 
@@ -209,6 +209,12 @@ body {
     color: #333;
     margin-bottom: 16px;
     max-width: 1300px;
+}
+
+@media screen and (max-width: 414px) {
+    #about {
+        height: 800px;
+    }   
 }
 
 #ourTeam {
@@ -239,6 +245,10 @@ body {
     #ourTeam{
         height: 900px;
     }
+
+    .teamText p {
+        max-width: 414px;
+    }
 }
 
 .carousel-container {
@@ -258,7 +268,6 @@ body {
     flex: 0 0 100%;
     max-width: 100%;
     box-sizing: border-box;
-    /* padding: 20px; */
 }
 
 @media (min-width: 600px) {
@@ -276,6 +285,12 @@ body {
         max-width: 45%;
         margin-right: 5%;
         box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .carousel-container {
+        margin-left: 0%;
     }
 }
 
@@ -365,6 +380,12 @@ body {
     padding: 20px;
     float: left;
     margin-left: 100px;
+}
+
+@media screen and (max-width: 414px) {
+    .job-card {
+        max-width: 414px;
+    }
 }
 
 .card .job_role {
@@ -506,6 +527,19 @@ body {
     height: 750px;
 }
 
+@media screen and (max-width: 414px) {
+    #courses {
+        height: 1000px;
+        display: block;
+    }
+
+    .course-card {
+        width: 300px;
+        margin-top: 100px;
+        margin-right: 1000px;
+    }
+}
+
 .course-card {
     background: #fff;
     border-radius: 8px;
@@ -573,7 +607,7 @@ body {
     footer {
         height: 275px !important;
     }
-    /* First footer column; inline with one another + aligned on the left */
+
     #footerSitemap {
         display: inline-block;
         padding: 60px 0px 0px 7%;
@@ -582,12 +616,12 @@ body {
         font-size: 16px;
         line-height: 25px;
     }
-    /* Removes hyperlink text when hovering */
+
     #footerSitemap a { 
         color: white;
         text-decoration: none;
     }
-    /* Second footer column; inline with one another + aligned on the left */
+
     #footerInfo {
         display: inline-block;
         padding: 60px 0px 0px 7%;
@@ -596,7 +630,7 @@ body {
         font-size: 16px;
         line-height: 25px;
     }
-    /* Third footer column; inline with one another + aligned on the right */
+
     #footerContactDetails {
         display: inline-block;
         padding: 50px 7% 0px 0px;
@@ -607,7 +641,6 @@ body {
         float: right;
     }
 
-    /* Fourth footer column; inline with one another + aligned on the right */
     #footerLocationHQ {
         display: inline-block;
         padding: 50px 7% 0px 0px;
@@ -638,30 +671,25 @@ body {
         vertical-align: top;
     }
 
-    .inline {
-        display: inline-block;
-        vertical-align: middle;
-        padding-left: 20px;
-    }
-
     /* Compatibility at 100px screen width */
     @media only screen and (max-width: 414px) {
         #footerCopyright {
-            float: left;
-            margin-left: -60%}
+            padding-left: 500px;}
         #footerContactDetails {
             display: block;
             float: right;
-            margin-top: -41%;
-            padding-left: 7%}
+            margin-top: -50%;
+            padding-left: -10%}
         #footerLocationHQ {
             float: right;
-            margin-top: -30%;}
+            margin-top: -50%;}
 		#footerInfo {
-            margin-top: -2%;
+            margin-top: -40%;
             display: block;}
         #footerSitemap {
+            margin-top: -50px;
             display: block;}
         footer {
-            height: 450px;}       
+            margin-top: 530%;
+        }       
     } 
