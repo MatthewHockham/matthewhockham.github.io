@@ -65,6 +65,7 @@ document.querySelectorAll('#navbar .nav-link').forEach(link => {
     const lastClone = cards[cards.length - 1].cloneNode(true);
     track.insertBefore(lastClone, cards[0]);
     track.appendChild(firstClone);
+
     // Update cards list for looping
     cards = Array.from(document.querySelectorAll(".profile-card"));
 
@@ -89,14 +90,11 @@ document.querySelectorAll('#navbar .nav-link').forEach(link => {
         const containerWidth = container.offsetWidth;
         const cardWidth = containerWidth / visible;
 
-        // if (track.children.length <= visible + 2) return;
-
         current += direction;
         track.style.transition = "transform 0.4s ease-in-out";
         track.style.transform = `translateX(-${cardWidth * current}px)`;
 
         track.addEventListener("transitionend", () => {
-            // const lastIndex = cards.length - 1;
             if (current === 0) {
                 current = cards.length - 2;
                 track.style.transition = "none";

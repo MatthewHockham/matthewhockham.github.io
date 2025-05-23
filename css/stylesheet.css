@@ -284,7 +284,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     padding: 20px;
-    /* text-align: center; */
 }
 
 .card img {
@@ -321,21 +320,18 @@ body {
 
 .card h3{
     margin: 15px 0 5px;
-    /* cursor: text; */
     text-align: center;
 }
 
 .card p{
     font-size: 14px;
     color: #555;
-    /* cursor: text; */
 }
 
 .card .role{
     font-weight: bold;
     color: #888;
     text-align: center;
-    /* cursor: text; */
 }
 
 .carousel-buttons {
