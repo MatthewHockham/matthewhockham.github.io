@@ -179,7 +179,7 @@
                     <li>We’re growing — and you’ll grow with us</li>
                 </ul>
                 <div class="apply-button">
-                    <button class="btn-apply" id="btn-apply">Apply Here →</button>
+                    <button class="btn-apply" id="btn-apply" onclick="toggleForm()">Apply Here →</button>
                 </div>
             </div>
         </div>
@@ -213,10 +213,33 @@
                     <li>We’re growing — and you’ll grow with us</li>
                 </ul>
                 <div class="apply-button">
-                    <button class="btn-apply" id="btn-apply">Apply Here →</button>
+                    <button class="btn-apply" id="btn-apply" onclick="toggleForm()">Apply Here →</button>
                 </div>
             </div>
         </div>
+
+        <div id="formPopup" class="overlay-container">
+            <div class="popup-box">
+                <h2>Application Form</h2>
+                <form class="form-container">
+                    <div class="form-section">
+                        <p><input placeholder="First name.." oninput="this.className= ''" required></p>
+                        <p><input placeholder="Last name.." oninput="this.className= ''" required></p>
+                    </div>
+
+                    <div class="form-section">
+                        <p><input placeholder="Email address.." oninput="this.className= ''" required></p>
+                        <p><input placeholder="Phone number.." oninput="this.className= ''" required></p>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" id="submitBtn">Submit</button>
+                        <button type="button" id="closeBtn">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
 
     <!-- <div id="formPopup" class="overlay-container"> -->
@@ -240,13 +263,6 @@
                 <div class="buttons" style="overflow:auto; float:right;">
                     <button type="button" id="prevBtn" onclick="formButton(-1)">⬅️ Prev</button>
                     <button type="button" id="nextBtn" onclick="formButton(1)">Next ➡️</button>
-                </div>
-
-                <div style="text-align: center;margin-top:40px;">
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
                 </div>
             </form>
         </div>
