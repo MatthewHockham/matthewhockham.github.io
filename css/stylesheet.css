@@ -26,7 +26,7 @@ body {
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 10001;
+    z-index: 10000;
     display: flex;
     flex-direction: column;
     font-family: Lato;
@@ -34,8 +34,7 @@ body {
     font-size: 20px;
     line-height: 0.1;
     border-bottom: solid;
-
-}
+} 
 
 .header h1 {
     font-size: 2rem;
@@ -90,7 +89,7 @@ body {
     text-decoration: none;
     width: 23.32%;
     font-size: 17px;
-}
+} 
 
 .nav-bar a:hover {
     background-color: #ddd;
@@ -204,9 +203,12 @@ body {
     margin-left: 15px;
 }
 
-#about h1 {
-    text-align: center;
-    margin-top: 50px;
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+    max-width: 1300px;
 }
 
 #ourTeam {
@@ -218,8 +220,19 @@ body {
 }
 
 .teamText {
-    margin-left: 15px;
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 15px;
+}
+
+.teamText p {
+    flex: 1;
+    max-width: 20%;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
 }
 
 @media screen and (max-width: 414px) {
@@ -230,10 +243,10 @@ body {
 
 .carousel-container {
     max-width: 1000px;
-    margin: auto;
+    margin-left: 800px;
+    margin-top: -300px;
     position: relative;
     overflow: hidden;
-    padding-left: 10px;
 }
 
 .carousel-track {
@@ -367,7 +380,7 @@ body {
     margin-top: 20px;   
 }
 
-#formPopup {
+/* #formPopup {
     display: none;
     position: fixed;
     top: 0;
@@ -413,7 +426,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 999;
-}
+} */
 
 /* .popupBox {
     background: #fff;
@@ -427,7 +440,7 @@ body {
     animation: fadeInUp 0.5s ease-out forwards;
 } */
 
-.form-container {
+/* .form-container {
     display: flex !important;
     flex-direction: column;
 }
@@ -461,7 +474,7 @@ body {
     border-radius: 8px;
     z-index: 10000;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3)
-}
+} */
 
 @media screen and (max-width: 1815px) {
     #jobs {
